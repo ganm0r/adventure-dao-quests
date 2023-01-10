@@ -46,7 +46,7 @@ function SetUp({ setActiveStep }: SetUpProps): JSX.Element {
     qname: '',
     desc: '',
     starts: '',
-    ends: ''
+    ends: '',
   });
 
   const { qname, desc, starts, ends } = formData;
@@ -97,7 +97,7 @@ function SetUp({ setActiveStep }: SetUpProps): JSX.Element {
           value={desc}
           onChange={onChange}
         />
-        <div style={{ display: "flex", flexDirection: 'column' }}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
           <Input
             title="Starts"
             optional={false}

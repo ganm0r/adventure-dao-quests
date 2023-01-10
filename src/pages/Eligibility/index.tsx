@@ -57,7 +57,7 @@ function Setup({ setActiveStep }: SetupProps): JSX.Element {
 
   const onSubmit = event => {
     event.preventDefault();
-    
+
     setActiveStep(3);
   };
   return (

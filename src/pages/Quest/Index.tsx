@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Quest = () => {
-  return (
-    <div>Quest</div>
-  )
-}
+  return <div>Quest</div>;
+};
 
-export default Quest
+export default Quest;

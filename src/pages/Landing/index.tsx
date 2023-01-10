@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import colors from 'theme/constants/colors';
@@ -35,23 +35,30 @@ const Flex = styled.div`
 `;
 
 const Landing = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-            <Flex>
-                <img src={require("../../images/eden-logo.png")} alt="eden-logo" height={72} style={{ marginTop: '4px' }} />
-                <Heading>
-                    Welcome to Adventure DAO Quests
-                </Heading>
-            </Flex>
-            <SubHeading>Create and participate in Quests</SubHeading>
-            <Grid>
-                <Button type='button' marginTop='8%' onClick={() => navigate('/quests')}>Launch Quests</Button>
-                <Button type='button' marginTop='8%' onClick={() => navigate('/create')}>Create Quests</Button>
-            </Grid>
-        </div>
-    )
-}
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
+      <Flex>
+        <img
+          src={require('../../images/eden-logo.png')}
+          alt="eden-logo"
+          height={72}
+          style={{ marginTop: '4px' }}
+        />
+        <Heading>Welcome to Adventure DAO Quests</Heading>
+      </Flex>
+      <SubHeading>Create and participate in Quests</SubHeading>
+      <Grid>
+        <Button type="button" marginTop="8%" onClick={() => navigate('/quests')}>
+          Launch Quests
+        </Button>
+        <Button type="button" marginTop="8%" onClick={() => navigate('/create')}>
+          Create Quests
+        </Button>
+      </Grid>
+    </div>
+  );
+};
 
-export default Landing
+export default Landing;

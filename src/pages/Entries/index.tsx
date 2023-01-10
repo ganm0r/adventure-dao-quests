@@ -64,7 +64,7 @@ interface EntriesProps {
 function Entries({ setActiveStep }: EntriesProps): JSX.Element {
   const [selectedOption, setSelectedOption] = useState('Twitter');
   const [formData, setFormData] = useState({
-    value: ''
+    value: '',
   });
 
   function onOptionChange(selected) {
@@ -91,16 +91,16 @@ function Entries({ setActiveStep }: EntriesProps): JSX.Element {
       title: 'Twitter',
       tasks: [
         {
-          desc: "Like a tweet on Twitter",
-          placeholder: "Enter tweet URL"
+          desc: 'Like a tweet on Twitter',
+          placeholder: 'Enter tweet URL',
         },
         {
-          desc: "Retweet a tweet on Twitter",
-          placeholder: "Enter tweet URL"
+          desc: 'Retweet a tweet on Twitter',
+          placeholder: 'Enter tweet URL',
         },
         {
-          desc: "Follow on Twitter",
-          placeholder: "Enter Twitter username"
+          desc: 'Follow on Twitter',
+          placeholder: 'Enter Twitter username',
         },
       ],
     },
@@ -108,8 +108,8 @@ function Entries({ setActiveStep }: EntriesProps): JSX.Element {
       title: 'Discord',
       tasks: [
         {
-          desc: "Join a Discord server",
-          placeholder: "Enter Discord server's URL"
+          desc: 'Join a Discord server',
+          placeholder: "Enter Discord server's URL",
         },
       ],
     },
@@ -117,8 +117,8 @@ function Entries({ setActiveStep }: EntriesProps): JSX.Element {
       title: 'Telegram',
       tasks: [
         {
-          desc: "Join a channel on Telegram",
-          placeholder: "Enter Telegram channel URL"
+          desc: 'Join a channel on Telegram',
+          placeholder: 'Enter Telegram channel URL',
         },
       ],
     },
@@ -169,12 +169,15 @@ function Entries({ setActiveStep }: EntriesProps): JSX.Element {
         ))}
       </Flex>
       <div>
-        {EntriesOptions.map(option => (
+        {EntriesOptions.map(option =>
           option.tasks.map(task => (
-            <div key={task.desc} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+            <div
+              key={task.desc}
+              style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}
+            >
               <Input
-                title=''
-                type='text'
+                title=""
+                type="text"
                 optional={false}
                 placeholder={task.placeholder}
                 required={false}
@@ -183,10 +186,12 @@ function Entries({ setActiveStep }: EntriesProps): JSX.Element {
                 name="data"
                 value={value}
               />
-              <Button marginTop='8%' type='button'>{task.desc}</Button>
+              <Button marginTop="8%" type="button">
+                {task.desc}
+              </Button>
             </div>
           ))
-        ))}
+        )}
       </div>
       <Form onSubmit={onSubmit}>
         <Button marginTop="12%" type="submit">
